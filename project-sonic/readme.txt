@@ -1,11 +1,9 @@
-###Terraform import
-terraform state list
+###functions
 
-the command used to create ssh key
-aws ec2 create-key-pair --endpoint http://aws:4566 --key-name jade --query 'KeyMaterial' --output text > /root/terraform-projects/project-jade/jade.pem
+Localstack provider is used.
+Don't forget to add
+--endpoint http://aws:4566 
+in your commands
 
-
-aws ec2 describe-instances  --endpoint http://aws:4566 
-
-after creating the empty resource block import the resource into terraform
-terraform import aws_instance.jade-mw id-of-the-resource
+To test out any functions with running entire configuration,type
+terraform console
